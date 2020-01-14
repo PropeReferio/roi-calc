@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Add two numbers here</h1>
+
+<form action="", method="POST">
+    <fieldset>
+        {{ addform.num1.label }}
+        {{ addform.num1(class="form-control") }}
+    </fieldset>
+    <fieldset>
+        {{ addform.num2.label }}
+        {{ addform.num2(class="form-control") }}
+    </fieldset>
+    {{ addform.submit(class="button")}}
+</form>
+
+{% if result %}
+<h2>{{ result }}</h2>
+{% endif %}
+
+{% endblock content %}
